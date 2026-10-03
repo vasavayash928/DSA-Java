@@ -1,3 +1,4 @@
+import java.util.*;
 public class trappedRainwater {
    public static int trappedRainwater(int height[]) {
       int n = height.length;
@@ -9,7 +10,7 @@ public class trappedRainwater {
       }
       int rightMax[] = new int[n];
       rightMax[n - 1] = height[n - 1];
-      
+
       for (int i = n - 2; i >= 0; i--) {
          rightMax[i] = Math.max(height[i], rightMax[i + 1]);
       }
